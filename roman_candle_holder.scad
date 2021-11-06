@@ -1,7 +1,7 @@
 module roman_candle_holder(hole_radius=9) {
     $fn = 360;
-    height=60;
-    base=30;
+    height=120;
+    base=60;
     
     difference(){
         cylinder(height, base);
@@ -13,9 +13,9 @@ module roman_candle_holder(hole_radius=9) {
         // Carve out Bottom
         color("red")
         translate([0,0,-0.1])
-        cylinder(height/2, 20, 9);
+        cylinder(height/2, base-10, 9);
     }
 }
 
 color("grey")
-roman_candle_holder(9);
+roman_candle_holder(9.5);
